@@ -35,10 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('posts.json');
             const posts = await response.json();
 
-            // 投稿を日付の降順（最新が上）でソート
-            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            // コンテナをクリア
+            posts.sort((a, b) => b.id - a.id);
             postsContainer.innerHTML = '';
 
             posts.forEach(post => {
@@ -59,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="post-author">shiina</span>
                     </div>
                     <div class="post-content">${escapeHTML(post.content)}</div>
+                    ${post.image ? `<div class="post-image"><img src="${post.image}" alt="投稿画像"></div>` : ''}
                     <div class="post-date">${formattedDate}</div>
                 `;
 

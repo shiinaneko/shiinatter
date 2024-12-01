@@ -169,3 +169,15 @@ footer {
 .stat-label {
     color: #536471;
 }
+
+/* styles.css に追加 */
+.post-image {
+    margin: 10px 0;
+    margin-left: 58px;
+}
+
+.post-image img {
+    max-width: 100%;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+}
