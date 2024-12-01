@@ -1,0 +1,52 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    color: #1c1e21;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-image: url('back.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.post {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-date {
+    color: #65676b;
+    font-size: 0.8em;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f2f5;
+    color: #65676b;
+}
