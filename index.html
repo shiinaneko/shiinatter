@@ -1,29 +1,40 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Micro Blog</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shiinatter</title>
+        <link rel="stylesheet" href="styles.css">
+        
+        <!-- ファビコンの設定 -->
+        <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    </head>
 <body>
     <div class="container">
         <header>
             <div class="profile">
                 <img src="./profile.jpg" alt="プロフィール画像" class="profile-image">
-                <h1>shiina</h1>
-                <p>私の投稿だけのTwitter</p>
             </div>
         </header>
 
         <main>
+            <div class="profile-info">
+                <h1>shiina</h1>
+                <p>私の投稿だけのTwitter</p>
+            </div>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="posts">投稿</button>
+                <button class="tab-button" data-tab="media">メディア</button>
+                <button class="tab-button" data-tab="likes">いいね</button>
+            </div>
             <section id="posts">
                 <!-- 投稿はJavaScriptで動的に挿入されます -->
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2024 My Micro Blog</p>
+            <p>&copy; 2024 Shiinatter</p>
         </footer>
     </div>
 

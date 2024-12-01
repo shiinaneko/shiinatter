@@ -7,6 +7,11 @@ body {
     color: #1c1e21;
 }
 
+h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -20,19 +25,36 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
+    height: 200px; /* headerの高さを固定 */
 }
 
+.profile-info {
+    /* text-align: center; */
+    padding-left: 20px;
+    margin-top: 10px; /* プロフィール画像との間隔を調整 */
+}
 .profile-image {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     object-fit: cover;
     border: 5px solid white;
+    position: absolute;
+    bottom: -50px;
+    left: 15%;
+    transform: translateX(-50%);
+}
+
+main {
+    position: relative;
+    padding-top: 50px; /* プロフィール画像の重なりを考慮 */
 }
 
 .post {
     border-bottom: 1px solid #e5e5e5;
     padding: 15px;
+    margin-top: 10px; /* profile-imageの高さに合わせてmargin-topを追加 */
 }
 
 .post-content {
@@ -49,4 +71,75 @@ footer {
     padding: 10px;
     background-color: #f0f2f5;
     color: #65676b;
+}
+
+/* styles.css に以下を追加 */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: white;
+    padding: 0 15px;
+}
+
+.tab-button {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    font-size: 15px;
+    color: #536471;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-button.active {
+    color: #1d9bf0;
+    font-weight: bold;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #1d9bf0;
+    border-radius: 4px 4px 0 0;
+}
+
+.tab-button:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+}
+
+.post {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-profile-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-author {
+    font-weight: bold;
+    color: #0f1419;
+}
+
+.post-content {
+    margin-left: 58px; /* プロフィール画像の幅 + margin-right */
+}
+
+.post-date {
+    margin-left: 58px;
+    color: #536471;
+    font-size: 0.9em;
 }
