@@ -143,3 +143,29 @@ footer {
     color: #536471;
     font-size: 0.9em;
 }
+
+.follow-stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.stat-item {
+    display: flex;
+    gap: 5px;
+    color: #536471;
+    cursor: pointer;
+}
+
+.stat-item:hover {
+    text-decoration: underline;
+}
+
+.stat-number {
+    color: #0f1419;
+    font-weight: bold;
+}
+
+.stat-label {
+    color: #536471;
+}
